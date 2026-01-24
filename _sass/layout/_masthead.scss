@@ -1,38 +1,45 @@
 /* ==========================================================================
-   MASTHEAD
+   Biomimetic Masthead
    ========================================================================== */
-
+@import "biomimetic-variables";
 .masthead {
   position: fixed;
-  background: var(--global-bg-color);
-  height: fit-content;
   top: 0;
   width: 100%;
-
-  -webkit-animation: intro 0.3s both;
-          animation: intro 0.3s both;
-  -webkit-animation-delay: 0.15s;
-          animation-delay: 0.15s;
+  height: fit-content;
   z-index: 20;
+
+  background: #FDFDF8;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid $biomimetic-border-subtle;
+  box-shadow: 0 6px 24px rgba(26, 46, 31, 0.06);
+
+  animation: intro 0.3s both;
+  animation-delay: 0.15s;
+
+  transition:
+    background $biomimetic-transition-slow,
+    box-shadow $biomimetic-transition-slow;
 
   &::after {
     content: "";
     position: absolute;
     bottom: 0;
+    left: 10%;
+    right: 10%;
     height: 1px;
-    background: var(--global-border-color);
-    width: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      $biomimetic-accent-forest,
+      transparent
+    );
+    opacity: 0.35;
   }
 
   &__inner-wrap {
-    @include container;
-    @include clearfix;
-    padding: 0.5em 1em;
+    padding: $biomimetic-space-sm $biomimetic-space-md;
     font-family: $sans-serif-narrow;
-
-    @include breakpoint($x-large) {
-      max-width: $x-large;
-    }
 
     nav {
       z-index: 10;
@@ -43,39 +50,71 @@
     }
   }
 }
-
 .masthead__menu {
-
   ul {
     margin: 0;
     padding: 0;
-    clear: both;
-    list-style-type: none;
+    list-style: none;
   }
 }
 
 .masthead__menu-item {
-  background-color: var(--global-bg-color);
   display: block;
-  list-style-type: none;
   white-space: nowrap;
+  background: transparent;
+
+  transition: transform $biomimetic-transition-fast;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
 
   &--lg {
-    padding-right: 2em;
+    padding-right: $biomimetic-space-lg;
     font-weight: 700;
+    color: $biomimetic-text-primary;
   }
 }
+.masthead__menu-item a {
+  position: relative;
+  color: $biomimetic-text-secondary;
+  transition: color $biomimetic-transition-normal;
 
-.masthead__menu-item.selected a {
-  color: var(--global-text-color);
-  font-weight: 700;
-  border-bottom: 2px solid var(--global-text-color);
-  pointer-events: none; /* Move this here */
-  cursor: default; /* Move this here too */
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.25rem;
+    width: 100%;
+    height: 2px;
+    background: $biomimetic-accent-forest;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform $biomimetic-transition-normal;
+    border-radius: 2px;
+  }
+
+  &:hover {
+    color: $biomimetic-text-primary;
+
+    &::after {
+      transform: scaleX(1);
+    }
+  }
 }
+.masthead__menu-item.selected a {
+  color: $biomimetic-text-primary;
+  font-weight: 700;
+  pointer-events: none;
+  cursor: default;
 
-.masthead__menu-item.selected a:hover {
-  color: var(--global-text-color);
-  border-bottom: 2px solid var(--global-text-color);
-  /* No need to repeat pointer-events and cursor here */
+  &::after {
+    transform: scaleX(1);
+    height: 3px;
+    background: linear-gradient(
+      90deg,
+      $biomimetic-accent-forest,
+      lighten($biomimetic-accent-forest, 18%)
+    );
+  }
 }

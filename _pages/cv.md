@@ -11,54 +11,64 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* Ph.D in AI Robustness, Hassan 2 University & University of Cordoba, Present
+* E.D. in CS&AI, Hassan 2 University, ENSAM, 2025
 
 Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* Spring-Summer 2025(Second Semester): R&D Engineer - Internship
+  * DICE(Digital Innovation Center of Excellence) @UM6P
+  * Duties includes: Developement an end-to-end AI-powered solution to improve worker safety in industrial environments. The system leverages fine-tuned object detection models to ensure proper compliance with PPE requirements and integrates real-time hazardous area intrusion detection
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* Summer 2024: Financial Analyst - Internship
+  * CDG Invest
+  * Duties included: Data collection and analysis to support financial advisory services for a cohort of startups 
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* Summer 2023: AI Engineer - Internship
+  * CDG Développement
+  * Duties included: Design and Development of a Financial Document Analyst
   
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
-
+* Programming Languages: 
+  * Python 
+* AWS Tools: 
+  * Sagemaker 
+  * Data Wrangler 
+  * Ground Truth 
+  * Lambda 
+  * Step function
+* Big Data
+  * Hadoop 
+  * PySpark 
+  * Apache Kafka 
+* CI/CD
+  * Git 
+  * DVC 
+  * Github Actions 
+  * Docker 
+{%comment%}
 Publications
 ======
+{%comment%}
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
+{%endcomment%} 
 Talks
 ======
+{%comment%}
   <ul>{% for post in site.talks reversed %}
     {% include archive-single-talk-cv.html  %}
   {% endfor %}</ul>
-  
+{%endcomment%}
 Teaching
 ======
+{%comment%}
   <ul>{% for post in site.teaching reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
+{%endcomment%} 
 Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+{%endcomment%}

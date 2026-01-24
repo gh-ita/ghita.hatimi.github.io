@@ -1,0 +1,265 @@
+/* ==========================================================================
+   Biomimetic Custom Styles
+   ========================================================================== */
+
+@import "biomimetic-variables";
+
+/* ===== Global Background ===== */
+body {
+  
+  background: $biomimetic-gradient-bg;
+  background-attachment: fixed;
+  min-height: 150vh;
+}
+
+/* Subtle texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.015;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' /%3E%3C/svg%3E");
+  z-index: 0;
+}
+
+.page,
+.page__content,
+.sidebar{
+  position: relative;
+  z-index: 1;
+  
+}
+
+/* ===== Sidebar Author Profile ===== */
+.sidebar .author__avatar img,
+.author__avatar img {
+  border-radius: $biomimetic-radius-organic !important;
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  transition: all $biomimetic-transition-slow;
+  
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.author__bio {
+  color: $biomimetic-text-secondary !important;
+  line-height: 1.7;
+}
+
+.author__name {
+  color: $biomimetic-text-primary !important;
+}
+
+/* ===== Social Links ===== */
+.author__urls li a,
+.author__urls-wrapper li a {
+  padding: 0.6rem 1rem;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid $biomimetic-border-subtle;
+  border-radius: $biomimetic-radius-md;
+  transition: all $biomimetic-transition-normal;
+  color: $biomimetic-text-secondary;
+  
+  &:hover {
+    background: white;
+    border-color: rgba(61, 90, 76, 0.3);
+    transform: translateX(4px);
+    color: $biomimetic-accent-forest !important;
+  }
+}
+
+/* ===== Navigation ===== */
+.greedy-nav {
+  background: none;
+}
+.masthead__menu-item a,
+.greedy-nav a {
+  position: relative;
+  transition: color $biomimetic-transition-normal;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: $biomimetic-accent-forest;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform $biomimetic-transition-normal;
+  }
+  
+  &:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+/* ===== Archive Items (Publications, Posts, etc.) ===== */
+.archive__item,
+.list__item {
+  padding: 1.5rem !important;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid $biomimetic-border-subtle;
+  border-radius: $biomimetic-radius-lg;
+  transition: all $biomimetic-transition-slow;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: $biomimetic-space-lg;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(209, 250, 229, 0.5), transparent);
+    opacity: 0;
+    transition: opacity $biomimetic-transition-slow;
+    z-index: 0;
+  }
+  
+  &:hover {
+    transform: translateY(-4px);
+    border-color: rgba(61, 90, 76, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    
+    &::before {
+      opacity: 1;
+    }
+  }
+  
+  .archive__item-title,
+  .archive__item-excerpt,
+  .archive__item-teaser,
+  p, a {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .archive__item-title {
+    color: $biomimetic-text-primary;
+  }
+  
+  .archive__item-excerpt {
+    color: $biomimetic-text-secondary;
+    line-height: 1.7;
+  }
+}
+
+/* ===== Page Content ===== */
+.page__content {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: $biomimetic-radius-lg;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.page__title {
+  color: $biomimetic-text-primary !important;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, $biomimetic-accent-forest, transparent);
+  }
+}
+
+/* ===== Tags & Categories ===== */
+.page__taxonomy-item,
+.archive__item-tag {
+  padding: 0.4rem 1rem !important;
+  background: rgba(209, 250, 229, 0.7) !important;
+  color: $biomimetic-accent-forest !important;
+  border-radius: 20px !important;
+  font-size: 0.85rem;
+  border: 1px solid rgba(61, 90, 76, 0.2);
+  transition: all $biomimetic-transition-fast;
+  
+  &:hover {
+    background: rgba(209, 250, 229, 1) !important;
+    transform: scale(1.05);
+  }
+}
+
+/* ===== Buttons ===== */
+.btn {
+  border-radius: $biomimetic-radius-md !important;
+  transition: all $biomimetic-transition-normal;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.btn--primary {
+  background-color: $biomimetic-accent-forest !important;
+  
+  &:hover {
+    background-color: darken($biomimetic-accent-forest, 10%) !important;
+  }
+}
+
+/* ===== Links ===== */
+a {
+  color: $biomimetic-accent-forest;
+  transition: color $biomimetic-transition-fast;
+  
+  &:hover {
+    color: darken($biomimetic-accent-forest, 15%);
+  }
+}
+
+/* ===== Sidebar Enhancement ===== */
+.sidebar {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: $biomimetic-radius-lg;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+}
+
+/* ===== Masthead Enhancement ===== */
+.masthead {
+  background: none;
+}
+.author__urls li {
+  white-space: normal; /* Allows text to wrap to the next line */
+  word-break: break-word; /* Prevents long URLs from breaking the layout */
+}
+
+.author__urls a {
+  display: block;
+  overflow-wrap: break-word; /* Ensures long text stays inside the sidebar */
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .author__avatar img {
+    border-radius: $biomimetic-radius-lg !important;
+  }
+  
+  .page__content {
+    padding: 1.5rem;
+  }
+  
+  .sidebar {
+    background: rgba(255, 255, 255, 0.8);
+  }
+}

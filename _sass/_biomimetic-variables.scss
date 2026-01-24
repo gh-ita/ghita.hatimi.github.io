@@ -1,0 +1,37 @@
+/* ==========================================================================
+   Biomimetic Design Variables
+   ========================================================================== */
+
+// Nature-inspired colors
+$biomimetic-bg-primary: #FDFDF8;
+$biomimetic-bg-secondary: #F5F5F0;
+$biomimetic-text-primary: #1A2E1F;
+$biomimetic-text-secondary: #4A5F54;
+$biomimetic-accent-forest: #3D5A4C;
+$biomimetic-accent-terracotta: #D4854A;
+$biomimetic-border-subtle: rgba(209, 213, 219, 0.5);
+
+// Organic spacing (Fibonacci-inspired)
+$biomimetic-space-xs: 0.5rem;
+$biomimetic-space-sm: 0.75rem;
+$biomimetic-space-md: 1.25rem;
+$biomimetic-space-lg: 2rem;
+$biomimetic-space-xl: 3.25rem;
+
+// Border radius
+$biomimetic-radius-sm: 12px;
+$biomimetic-radius-md: 20px;
+$biomimetic-radius-lg: 24px;
+$biomimetic-radius-organic: 40% 60% 70% 30% / 40% 50% 60% 50%;
+
+// Transitions
+$biomimetic-transition-fast: 200ms ease-in-out;
+$biomimetic-transition-normal: 300ms ease-in-out;
+$biomimetic-transition-slow: 500ms ease-in-out;
+
+// Gradients
+$biomimetic-gradient-bg: linear-gradient(135deg, 
+  $biomimetic-bg-secondary 0%, 
+  rgba(254, 243, 199, 0.3) 50%, 
+  rgba(209, 250, 229, 0.2) 100%
+);
