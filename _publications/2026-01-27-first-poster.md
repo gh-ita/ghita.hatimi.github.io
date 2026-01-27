@@ -6,8 +6,8 @@ permalink: /publication/2026-01-27-first-poster
 date: 2026-01-27
 venue: 'SADASC'
 header:
-  teaser: "First poster.png"
-link: "/images/First poster.png"
+  teaser: "first-poster.png"
+link: "/ghita.hatimi.github.io/images/first-poster.png"
 ---
 
 Poster presentation on Bayesian Updating in Large Language Models.
