@@ -47,6 +47,12 @@ Skills
   * DVC 
   * Github Actions 
   * Docker 
+
+Certifications
+======
+* [AWS Machine Learning Fundamentals](https://www.udacity.com/certificate/e/c11458e8-f6c0-11ee-929b-f7744e95d23d)
+* [AI Programming with Python](https://www.udacity.com/certificate/e/a473430c-6c23-11ee-98eb-73d2cc0dc7f7)
+
 {%comment%}
 Publications
 ======
