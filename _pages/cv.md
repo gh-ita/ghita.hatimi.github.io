@@ -53,6 +53,12 @@ Certifications
 * [AWS Machine Learning Fundamentals](https://www.udacity.com/certificate/e/c11458e8-f6c0-11ee-929b-f7744e95d23d)
 * [AI Programming with Python](https://www.udacity.com/certificate/e/a473430c-6c23-11ee-98eb-73d2cc0dc7f7)
 
+Conference Organization & Academic Service
+======
+* Organizing Committee Member, SADASc (Springer Conference)
+  * Prepared and compiled the official conference proceedings
+  * Coordinated formatting and submission in compliance with Springer guidelines
+  * Contributed to the overall organization and academic quality of the conference
 {%comment%}
 Publications
 ======

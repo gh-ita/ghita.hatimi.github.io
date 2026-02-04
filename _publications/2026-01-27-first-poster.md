@@ -10,4 +10,4 @@ header:
 link: "/ghita.hatimi.github.io/images/first-poster.png"
 ---
 
-Poster presentation on Bayesian Updating in Large Language Models.
+Rewarded Best Poster Award at SADASC'26 Springer Conference.
