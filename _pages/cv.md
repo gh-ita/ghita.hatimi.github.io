@@ -59,6 +59,21 @@ Conference Organization & Academic Service
   * Prepared and compiled the official conference proceedings
   * Coordinated formatting and submission in compliance with Springer guidelines
   * Contributed to the overall organization and academic quality of the conference
+
+Referees
+======
+* Dr. Ventura Soto Sebastian 
+  * Professor of Computing and Artificial Intelligence, Head of the Knowledge Discovery and Intelligent Systems (KDIS) research group
+  * University of Cordoba
+  * Email: sventura@uco.es
+  * Relationship: Supervisor 
+
+* Dr. Hamlich Mohamed
+  * Director of the Research Laboratory Complex Cyber-Physical Systems
+  * University of Hassan II of Casablanca
+  * Email: mohamed.hamlich@univh2c.ma
+  * Relationship: Supervisor 
+
 {%comment%}
 Publications
 ======
