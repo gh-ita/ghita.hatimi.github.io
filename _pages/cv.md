@@ -74,6 +74,13 @@ Referees
   * Email: mohamed.hamlich@univh2c.ma
   * Relationship: Supervisor 
 
+Languages 
+======
+* English: Toeic 915/990
+* Arabic: native
+* French: C2 
+ 
+
 {%comment%}
 Publications
 ======
